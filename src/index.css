@@ -932,6 +932,7 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -976,6 +977,7 @@ section,
   position: relative;
   margin-bottom: 15px;
   cursor: pointer;
+
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -988,12 +990,14 @@ section,
   transition: all ease-in-out 0.3s;
   background: color-mix(in srgb, var(--background-color), transparent 10%);
   padding: 15px;
+
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
+
 }
 
 .portfolio .portfolio-item .portfolio-info p {
@@ -1001,6 +1005,7 @@ section,
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
+
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
@@ -1012,6 +1017,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   transition: 0.3s;
   line-height: 0;
+
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
@@ -1028,6 +1034,7 @@ section,
   opacity: 1;
   bottom: 20px;
 }
+
 
 /*--------------------------------------------------------------
 # Pricing Section

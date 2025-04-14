@@ -52,34 +52,37 @@ export const sampleProjects = [
         ],
         category: "application intranet",
         client: "TEK-UP",
-        date: "15 janvier au 30 avril 2024",
+        date: "15 janvier au 30 mars 2024",
         url: "https://knowlab.abkm.tech/"
     },
     {
         id: 3,
-        title: "Application de Réservation de Vols - WingsManager",
-        description: "Ce projet consiste à développer une application web de gestion des réservations de vols et du personnel aérien (pilotes, hôtesses, stewards).",
+        title: "Application de Gestion Pharmaceutique - DPI",
+        description: "Développement d’une application web intégrée à un ERP médical pour la gestion pharmaceutique et l’amélioration du Dossier Patient Informatisé (DPI).",
         description_long:
-            "WingsManager est une plateforme web dédiée à la gestion complète des vols aériens au sein d'une compagnie ou d'une agence de voyage. Elle intègre deux volets principaux : la réservation de vols par les clients et la gestion du personnel navigant (pilotes, stewards, hôtesses). Cette solution vise à moderniser l’organisation interne des compagnies aériennes tout en offrant une expérience fluide aux utilisateurs finaux." +
-            "Du côté client, l’interface permet la recherche de vols, la consultation des horaires disponibles, la réservation en ligne ainsi que la réception de confirmations par e-mail. Chaque réservation est enregistrée dans un tableau de bord personnalisé. Du côté de l’administration, les gestionnaires peuvent ajouter ou modifier les vols, affecter les membres du personnel à des trajets précis, consulter le planning, et suivre les réservations en temps réel." +
-            "Développée avec ReactJS pour le front-end et .NET Core (C#) pour le back-end, la plateforme utilise une architecture MVC robuste avec une base de données relationnelle. Elle intègre également un système de rôles et permissions, un moteur de recherche multi-critères pour les vols, ainsi qu’un historique détaillé pour la traçabilité. Cette application est idéale pour toute structure souhaitant automatiser ses processus de réservation tout en gérant efficacement ses ressources humaines aériennes.",
-        images: images.projetReservationVols, // à définir dans ton fichier images.js
-        technologies: ["React", "Tailwind CSS", ".NET Core (C#)", "SQL Server", "Entity Framework", "Docker"],
+            "Ce projet s’inscrit dans la modernisation des systèmes d’information en santé, avec pour objectif la conception et le développement d’une application web de gestion pharmaceutique intégrée à un ERP médical, dans le cadre du Dossier Patient Informatisé (DPI) de la société TIR. Il vise à optimiser la gestion des médicaments, renforcer la qualité des soins et garantir la sécurité des patients." +
+            "L’application permet de gérer les stocks de médicaments, suivre leur péremption, centraliser les informations pharmaceutiques liées aux dossiers des patients, et faciliter la communication entre les acteurs de la chaîne de soins. Une attention particulière a été portée à la traçabilité, la fiabilité et la sécurité des données." +
+            "Le projet a suivi les étapes classiques de développement logiciel : analyse des besoins via un cahier des charges, modélisation UML avec le processus unifié, et développement technique à l’aide de technologies web modernes. L’application est actuellement en phase de test avec les professionnels de santé afin d’identifier les éventuels bogues et d’améliorer l’ergonomie du système." +
+            "Une future extension prévoit l’implémentation d’un module d’authentification des produits pharmaceutiques, capable de vérifier automatiquement leur date de péremption avant leur enregistrement en stock, afin de limiter tout risque lié aux produits périmés.",
+        images: images.projetPharmaceutique,
+        technologies: ["React", "Tailwind CSS", "Django", "PostgreSQL", "Docker", "UML"],
         fonctionnalités: [
-            "Réservation de vols en ligne",
-            "Consultation des horaires et disponibilité",
-            "Affectation du personnel de bord aux vols",
-            "Gestion des plannings et notifications",
-            "Interface moderne pour clients et administrateurs"
+            "Gestion des stocks de médicaments",
+            "Suivi des péremptions et alertes",
+            "Intégration avec le Dossier Patient Informatisé (DPI)",
+            "Traçabilité des produits et sécurité des données",
+            "Interface intuitive pour le personnel médical"
         ],
         collaborators: [
-            { name: "Boni Acobe Ange Ulrich", role: "Développeur backend (.NET Core)" },
-            { name: "Jean Crhistian Ahikpa", role: "Développeur Front React et Designer UI/UX" }
+            { name: "Zié Abasse TRAORE", role: "Développeur Full Stack" },
+            { name: "KEITA Mamady", role: "Développeur Full Stack" },
+            { name: "TANO ASSANDE Jacob", role: "Responsable Technique du service" + "informatique de TIR" },
+            { name: "Cissé Souleymane Désiré Cédri", role: "Enseignant-Chercheur à" + "l’ESATIC" },
         ],
-        category: "gestion aérienne",
-        client: "TEK-UP University",
-        date: "03 mars au 30 juin 2025",
-        url: "#"
+        category: "santé numérique",
+        client: "Société TIR / ESATIC",
+        date: "27 février au 27 mai 2023",
+        url: ""
     },
     {
         id: 4,
@@ -104,7 +107,7 @@ export const sampleProjects = [
         ],
         category: "e-commerce",
         client: "TEK-UP University",
-        date: "15 avril au 30 juillet 2025",
+        date: "15 octobre au 30 decembre 2025",
         url: "#"
     },
     {
@@ -117,7 +120,7 @@ export const sampleProjects = [
             "Les propriétaires disposent d’un tableau de bord pour gérer leurs annonces, suivre les demandes, modifier les informations et vérifier les statistiques de consultation. La plateforme intègre également un système de géolocalisation pour situer précisément les biens sur une carte, ainsi qu’un back-office sécurisé pour l’administration du contenu, des utilisateurs et des transactions." +
             "MAPISS vise à rendre le processus de recherche ou de vente de bien immobilier plus simple, rapide et accessible, tout en garantissant la sécurité des échanges.",
         images: images.projetMapiss, // À créer dans ton fichier images.js
-        technologies: ["Django", "Python", "PostgreSQL", "Bootstrap", "Leaflet.js", "Docker"],
+        technologies: ["Django", "Python", "PostgreSQL", "Bootstrap", "Docker"],
         fonctionnalités: [
             "Publication d’annonces immobilières",
             "Recherche filtrée (ville, type, prix, etc.)",
@@ -126,12 +129,14 @@ export const sampleProjects = [
             "Géolocalisation des biens sur carte interactive"
         ],
         collaborators: [
-            { name: "Boni Acobe Ange Ulrich", role: "Développeur Backend Django & DevOps" },
-            { name: "Jean Crhistian Ahikpa", role: "Développeur Front & UI/UX Designer" }
+            { name: "Aou Koffi Jules ", role: "Développeur Backend" },
+            { name: "Koukou Kouame Yannick", role: "Développeur Front & UI/UX Designer" },
+            { name: "Anzoua Dapa", role: "UI/UX Designer" },
+            { name: "Mimi harston ", role: "UI/UX Designer" },
         ],
         category: "immobilier",
         client: "Projet personnel / académique",
-        date: "10 janvier au 15 avril 2025",
+        date: "10 janvier au 15 avril 2023",
         url: "#"
     },
     {
@@ -153,11 +158,11 @@ export const sampleProjects = [
             "Notifications email et SMS automatiques"
         ],
         collaborators: [
-            { name: "Boni Acobe Ange Ulrich", role: "Développeur Backend Laravel & Intégrateur" },
+            { name: "Boni Acobe Ange Ulrich", role: "Développeur Backend Laravel" },
         ],
         category: "location",
         client: "Agence AutoFleet",
-        date: "20 février au 30 mai 2025",
+        date: "20 février au 30 mai 2024",
         url: "#"
     },
     {
@@ -182,8 +187,34 @@ export const sampleProjects = [
         ],
         category: "design",
         client: "",
-        date: "05 janvier au 12 janvier 2025",
+        date: "05 janvier au 12 mars 2023",
         url: ""
-    }
+    },
+    {
+        id: 8,
+        title: "Application de Réservation de Vols - WingsManager",
+        description: "Ce projet consiste à développer une application web de gestion des réservations de vols et du personnel aérien (pilotes, hôtesses, stewards).",
+        description_long:
+            "WingsManager est une plateforme web dédiée à la gestion complète des vols aériens au sein d'une compagnie ou d'une agence de voyage. Elle intègre deux volets principaux : la réservation de vols par les clients et la gestion du personnel navigant (pilotes, stewards, hôtesses). Cette solution vise à moderniser l’organisation interne des compagnies aériennes tout en offrant une expérience fluide aux utilisateurs finaux." +
+            "Du côté client, l’interface permet la recherche de vols, la consultation des horaires disponibles, la réservation en ligne ainsi que la réception de confirmations par e-mail. Chaque réservation est enregistrée dans un tableau de bord personnalisé. Du côté de l’administration, les gestionnaires peuvent ajouter ou modifier les vols, affecter les membres du personnel à des trajets précis, consulter le planning, et suivre les réservations en temps réel." +
+            "Développée avec ReactJS pour le front-end et .NET Core (C#) pour le back-end, la plateforme utilise une architecture MVC robuste avec une base de données relationnelle. Elle intègre également un système de rôles et permissions, un moteur de recherche multi-critères pour les vols, ainsi qu’un historique détaillé pour la traçabilité. Cette application est idéale pour toute structure souhaitant automatiser ses processus de réservation tout en gérant efficacement ses ressources humaines aériennes.",
+        images: images.projetReservationVols, // à définir dans ton fichier images.js
+        technologies: ["React", "Tailwind CSS", ".NET Core (C#)", "SQL Server", "Entity Framework", "Docker"],
+        fonctionnalités: [
+            "Réservation de vols en ligne",
+            "Consultation des horaires et disponibilité",
+            "Affectation du personnel de bord aux vols",
+            "Gestion des plannings et notifications",
+            "Interface moderne pour clients et administrateurs"
+        ],
+        collaborators: [
+            { name: "Boni Acobe Ange Ulrich", role: "Développeur backend (.NET Core)" },
+            { name: "Jean Crhistian Ahikpa", role: "Développeur Front React et Designer UI/UX" }
+        ],
+        category: "gestion aérienne",
+        client: "TEK-UP University",
+        date: "03 septembre au 30 novembre 2024",
+        url: "#"
+    },
 
 ];

@@ -123,7 +123,24 @@ const images = {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744558743/Screenshot_2025-04-13_at_16.31.30_m5wtnb.png`,
         }
     ],
-
+    projetPharmaceutique: [
+        {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632606/Capture_d_%C3%A9cran_du_2023-05-23_10-25-42_bhurvh.png`,
+        },
+        {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632606/Capture_d_%C3%A9cran_du_2023-06-09_12-44-09_ispgs8.png`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632607/Capture_d_%C3%A9cran_du_2023-06-09_12-47-05_a8iilh.png`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632607/Capture_d_%C3%A9cran_du_2023-06-09_12-47-18_huhsmy.png`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632607/Capture_d_%C3%A9cran_du_2023-06-09_12-46-44_bfn6av.png`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632609/Capture_d_%C3%A9cran_du_2023-06-09_12-59-19_e3itnh.png`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632609/Capture_d_%C3%A9cran_du_2023-06-09_12-48-56_feykpe.png`,
+        }
+    ],
 };
 
 export default images;
