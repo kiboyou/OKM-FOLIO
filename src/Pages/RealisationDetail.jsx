@@ -124,8 +124,32 @@ const PortfolioDetails = () => {
                                         <li><strong>Catégorie</strong> {project.category}</li>
                                         <li><strong>Client</strong> {project.client}</li>
                                         <li><strong>Date du Projet</strong> {project.date}</li>
-                                        <li><strong>URL du Projet</strong> <a href={`https://${project.url}`} target="_blank" rel="noreferrer">{project.url}</a></li>
-                                        <li><a href={`https://${project.url}`} target="_blank" rel="noreferrer" className="btn-visit">Visiter le Site Web</a></li>
+                                        {project.url && (
+                                            <>
+                                                <li>
+                                                    <strong>URL du Projet : </strong>
+                                                    <a
+                                                        href={`https://${project.url}`}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="text-blue-600 hover:underline"
+                                                    >
+                                                        {project.url}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href={`https://${project.url}`}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="btn-visit"
+                                                    >
+                                                        Visiter le Site Web
+                                                    </a>
+                                                </li>
+                                            </>
+                                        )}
+
                                     </ul>
                                 </div>
                             </div>

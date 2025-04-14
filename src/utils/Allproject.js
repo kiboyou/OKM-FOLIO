@@ -108,7 +108,7 @@ export const sampleProjects = [
         category: "e-commerce",
         client: "TEK-UP University",
         date: "15 octobre au 30 decembre 2025",
-        url: "#"
+        url: ""
     },
     {
         id: 5,
@@ -137,7 +137,7 @@ export const sampleProjects = [
         category: "immobilier",
         client: "Projet personnel / académique",
         date: "10 janvier au 15 avril 2023",
-        url: "#"
+        url: ""
     },
     {
         id: 6,
@@ -163,7 +163,7 @@ export const sampleProjects = [
         category: "location",
         client: "Agence AutoFleet",
         date: "20 février au 30 mai 2024",
-        url: "#"
+        url: ""
     },
     {
         id: 7,
@@ -214,7 +214,7 @@ export const sampleProjects = [
         category: "gestion aérienne",
         client: "TEK-UP University",
         date: "03 septembre au 30 novembre 2024",
-        url: "#"
+        url: ""
     },
 
 ];
