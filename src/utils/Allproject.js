@@ -183,7 +183,10 @@ export const sampleProjects = [
             "Maquette prête pour intégration frontend"
         ],
         collaborators: [
-            { name: "Jean Crhistian Ahikpa", role: "UI/UX Designer principal" },
+            { name: "Aou Koffi Jules ", role: "Développeur Backend" },
+            { name: "Koukou Kouame Yannick", role: "Développeur Front & UI/UX Designer" },
+            { name: "Anzoua Dapa", role: "UI/UX Designer" },
+            { name: "Mimi harston ", role: "UI/UX Designer" },
         ],
         category: "design",
         client: "",
