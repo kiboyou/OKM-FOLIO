@@ -219,5 +219,39 @@ export const sampleProjects = [
         date: "03 septembre au 30 novembre 2024",
         url: ""
     },
+    {
+    id: 9,
+    title: "Projet BI - Analyse Personnalisée sur ERP Odoo",
+    description: "Un projet de Business Intelligence avancé visant à dépasser les limites analytiques standards d’Odoo ERP en construisant une solution sur mesure.",
+    description_long:
+        "Ce projet de Business Intelligence a été réalisé dans le cadre du second semestre de la formation en Data Science & Intelligence Artificielle à TEK-UP University of Digital Sciences. " +
+        "Notre objectif était de développer une solution BI avancée, capable d’offrir des visualisations, des prédictions et des analyses approfondies sur les données des modules Odoo ERP, tout en surmontant les limites d'accès aux données." +
+        "Le projet a couvert l’ensemble du cycle de vie de la donnée : de l’extraction (ETL) à la modélisation prédictive, en passant par le stockage dans un Data Lake (Minio S3), la structuration dans un Data Warehouse (SQL Server), et la visualisation avec Power BI. " +
+        "Nous avons reconstruit notre propre base de données inspirée des schémas Odoo (ventes, achats, stock) pour garantir l’indépendance et la flexibilité des analyses. " +
+        "La mise en production a été assurée à l’aide de FastAPI et ReactJS, avec une attention particulière portée à la qualité de la modélisation Machine Learning et à l’automatisation des pipelines via Airflow.",
+    images: images.projetBI, // à définir dans ton fichier images.js
+    technologies: [
+        "Airflow", "Python", "PostgreSQL", "SQL Server", 
+        "Minio", "Power BI", "Scikit-Learn", 
+        "FastAPI", "ReactJS"
+    ],
+    fonctionnalités: [
+        "Pipeline ETL automatisé avec Airflow",
+        "Reconstitution de schémas Odoo ERP",
+        "Stockage Data Lake et Data Warehouse",
+        "Visualisations dynamiques avec Power BI",
+        "Modélisation prédictive avec Scikit-Learn",
+        "Mise en production API & Front (FastAPI + React)"
+    ],
+    collaborators: [
+        { name: "Boni Acobe Ange Ulrich", role: "Data Engineer / Analyste BI" },
+        { name: "Jean Christian AHIKPA", role: "Analyste BI & Intégrateur BI" }
+    ],
+    category: "Business Intelligence",
+    client: "TEK-UP University",
+    date: "Mars à Juin 2025",
+    url: ""
+}
+
 
 ];

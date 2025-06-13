@@ -141,6 +141,22 @@ const images = {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1744632609/Capture_d_%C3%A9cran_du_2023-06-09_12-48-56_feykpe.png`,
         }
     ],
+    projetBI : [
+         {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820738/WhatsApp_Image_2025-06-13_at_13.51.41_1_pnvyx4.jpg`,
+        },
+        {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820739/WhatsApp_Image_2025-06-13_at_13.51.42_1_qeq6e5.jpg`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820739/WhatsApp_Image_2025-06-13_at_13.51.42_rcm2ac.jpg`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820739/WhatsApp_Image_2025-06-13_at_13.51.42_2_mvuscg.jpg`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820739/WhatsApp_Image_2025-06-13_at_13.51.43_1_ox151v.jpg`,
+        }, {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820738/WhatsApp_Image_2025-06-13_at_13.51.41_jpu8bk.jpg`,
+        }
+    ]
 };
 
 export default images;
