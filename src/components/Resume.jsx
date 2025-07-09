@@ -233,10 +233,10 @@ const Resume = () => {
             </div>
             {/* Bouton pour télécharger le CV */}
             <div className="text-center mt-4 ">
-                <a href="/src/assets/cv/cv-okm_FR.pdf" download>
+                <a href="/assets/cv/cv-okm_FR.pdf" download>
                     <button className="see-more-btn btn btn-success mt-10">Télécharger mon CV en francais </button>
                 </a>
-                <a href="/src/assets/cv/cv-okm_EN.pdf" download>
+                <a href="/assets/cv/cv-okm_EN.pdf" download>
                     <button className="see-more-btn btn btn-success">Download my CV in english</button>
                 </a>
             </div>
