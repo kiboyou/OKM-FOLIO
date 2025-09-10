@@ -1,14 +1,16 @@
-import ProjectCard from "./ProjectCard";
 import { Link } from "react-router-dom";
-import {sampleProjects} from "../utils/Allproject.js";
+import useLanguage from '../context/useLanguage.js';
+import { sampleProjects } from "../utils/Allproject.js";
+import ProjectCard from "./ProjectCard";
 
 const Portfolio = () => {
 
+    const { t } = useLanguage();
     return (
         <section id="portfolio" className="portfolio section">
             <div className="container section-title">
-                <h2>Portfolio</h2>
-                <p>Quelques exemples de mes réalisations et projets.</p>
+                <h2>{t.portfolio.title}</h2>
+                <p>{t.portfolio.intro}</p>
             </div>
 
             <div className="container portfolio-container">
@@ -18,7 +20,7 @@ const Portfolio = () => {
                     ))}
                 </div>
                 <div className="see-more" style={{ textAlign: "center", marginTop: "30px" }}>
-                    <Link to="/realisations" className="btn btn-success see-more-btn">Voir plus de réalisations</Link>
+                    <Link to="/realisations" className="btn btn-success see-more-btn">{t.portfolio.seeMore}</Link>
                 </div>
             </div>
         </section>

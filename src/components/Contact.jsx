@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import useLanguage from '../context/useLanguage.js';
 
 const Contact = () => {
   const [loading, setLoading] = useState(false); // état pour gérer le loading
@@ -50,11 +51,12 @@ const Contact = () => {
     }
   };
 
+  const { t } = useLanguage();
   return (
       <section id="contact" className="contact section">
         <div className="container section-title">
-          <h2>Contact</h2>
-          <p>N'hésitez pas à me contacter pour toute question ou opportunité.</p>
+          <h2>{t.contact.title}</h2>
+          <p>{t.contact.subtitle}</p>
         </div>
         <div className="container">
           <div className="info-wrap">
@@ -63,8 +65,8 @@ const Contact = () => {
                 <div className="info-item d-flex align-items-center">
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h3>Adresse</h3>
-                    <p>Tunis, Ariana, Tunisie</p>
+                    <h3>{t.contact.address}</h3>
+                    <p>{t.about?.values?.address || 'Tunis, Tunisie'}</p>
                   </div>
                 </div>
               </div>
@@ -72,7 +74,7 @@ const Contact = () => {
                 <div className="info-item d-flex align-items-center">
                   <i className="bi bi-telephone flex-shrink-0"></i>
                   <div>
-                    <h3>Appelez-moi</h3>
+                    <h3>{t.contact.callMe}</h3>
                     <p>+216 58 486 482</p>
                   </div>
                 </div>
@@ -81,7 +83,7 @@ const Contact = () => {
                 <div className="info-item d-flex align-items-center">
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
-                    <h3>Envoyez-moi un email</h3>
+                    <h3>{t.contact.emailMe}</h3>
                     <p>ouattarakiboyoumohamed@gmail.com</p>
                   </div>
                 </div>
@@ -96,7 +98,7 @@ const Contact = () => {
                     type="text"
                     name="name"
                     className="form-control"
-                    placeholder="Votre Nom"
+                    placeholder={t.contact.placeholders.name}
                     required
                 />
               </div>
@@ -105,7 +107,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     className="form-control"
-                    placeholder="Votre Email"
+                    placeholder={t.contact.placeholders.email}
                     required
                 />
               </div>
@@ -114,7 +116,7 @@ const Contact = () => {
                     type="text"
                     name="subject"
                     className="form-control"
-                    placeholder="Objet"
+                    placeholder={t.contact.placeholders.subject}
                     required
                 />
               </div>
@@ -123,18 +125,18 @@ const Contact = () => {
                   name="description"
                   className="form-control"
                   rows="6"
-                  placeholder="Message"
+                  placeholder={t.contact.placeholders.message}
                   required
               ></textarea>
               </div>
               <div className="col-12 text-center">
                 <button type="submit" className="btn btn-primary">
                   {loading ? (
-                      <div className="spinner-border text-light" role="status">
-                        <span className="visually-hidden">Chargement...</span>
-                      </div>
+                    <div className="spinner-border text-light" role="status">
+                      <span className="visually-hidden">{t.contact.sending}</span>
+                    </div>
                   ) : (
-                      "Envoyer"
+                    t.contact.send
                   )}
                 </button>
               </div>
@@ -144,9 +146,7 @@ const Contact = () => {
           {/* Message de statut après l'envoi */}
           {messageStatus && (
               <div className={`alert ${messageStatus === "success" ? "see-more-btn1" : "alert-danger"} mt-3`}>
-                {messageStatus === "success"
-                    ? "Le message a été envoyé avec succès !"
-                    : "Une erreur est survenue. Veuillez réessayer."}
+                {messageStatus === "success" ? t.contact.success : t.contact.error}
               </div>
           )}
         </div>

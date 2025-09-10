@@ -74,6 +74,36 @@ body {
   /*margin-left: 1rem;*/
   margin: 0.5rem;
 }
+a.btn.btn-success, button.btn.btn-success, .btn-success {
+  --bs-btn-bg: #006400;
+  --bs-btn-border-color: #006400;
+  --bs-btn-hover-bg: #008000;
+  --bs-btn-hover-border-color: #008000;
+  --bs-btn-active-bg: #004d00;
+  --bs-btn-active-border-color: #004d00;
+  background-color: #006400;
+  border-color: #006400;
+}
+
+.btn-outline-success {
+  --bs-btn-color: #006400;
+  --bs-btn-border-color: #006400;
+  --bs-btn-hover-bg: #006400;
+  --bs-btn-hover-border-color: #006400;
+  --bs-btn-active-bg: #006400;
+  --bs-btn-active-border-color: #006400;
+  color: #006400;
+  border-color: #006400;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+  color: #ffffff;
+}
+
+.text-success {
+  color: #006400 !important;
+}
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -1606,9 +1636,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+/* .starter-section { }  -- supprimé car vide */
 
 .skills-content {
   margin-bottom: 20px;

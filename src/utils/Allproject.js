@@ -2,6 +2,71 @@ import images from "./imagesLink.js";
 
 export const sampleProjects = [
     {
+    id: 10,
+    title: "Projet Pentesting avec IA - Automatisation de la Sécurité Offensive",
+    description: "Un projet de cybersécurité innovant combinant techniques de pentesting et intelligence artificielle afin d’automatiser la détection et l’exploitation de vulnérabilités.",
+    description_long:
+        "Ce projet de Pentesting intelligent a été développé dans un contexte académique et pratique afin de démontrer le potentiel de l’intelligence artificielle dans la sécurité offensive. " +
+        "L’objectif principal était de concevoir une solution capable de réaliser de manière automatisée différentes étapes du pentest : découverte des sous-domaines, scan d’IP et de ports, recherche de vulnérabilités, exploitation et rapport. " +
+        "Le projet intègre une approche basée sur une pile de tâches FIFO, permettant d’exécuter en parallèle la collecte d’informations et le lancement des attaques, tout en priorisant l’exploration continue. " +
+        "Une API backend a été développée avec FastAPI pour orchestrer les processus et gérer les résultats, tandis qu’un frontend ReactJS permet la visualisation interactive des découvertes et la gestion des tests. " +
+        "L’IA intervient dans la corrélation des résultats, la priorisation des cibles et la génération de rapports intelligents, offrant ainsi une approche plus efficace et automatisée du pentesting.",
+    images: images.projetPentesting, // à définir dans ton fichier images.js
+    technologies: [
+        "Python", "FastAPI", "ReactJS", "Docker",
+        "Nmap", "Metasploit RPC", "Scikit-Learn",
+        "LangChain", "LLMs"
+    ],
+    fonctionnalités: [
+        "Découverte automatisée des sous-domaines et IP",
+        "Scan de ports et détection de services",
+        "Recherche et corrélation de vulnérabilités (CVE)",
+        "Exploitation semi-automatisée via Metasploit",
+        "Orchestration IA pour la priorisation des cibles",
+        "Interface interactive de suivi des résultats"
+    ],
+    collaborators: [
+        { name: "Boni Acobe Ange Ulrich", role: "Data Engineer / Analyste BI" }
+    ],
+    category: "Cybersecurity / Pentesting",
+    client: "Projet académique",
+    date: "2024",
+    url: ""
+    },
+    {
+    id: 9,
+    title: "Projet BI - Analyse Personnalisée sur ERP Odoo",
+    description: "Un projet de Business Intelligence avancé visant à dépasser les limites analytiques standards d’Odoo ERP en construisant une solution sur mesure.",
+    description_long:
+        "Ce projet de Business Intelligence a été réalisé dans le cadre du second semestre de la formation en Data Science & Intelligence Artificielle à TEK-UP University of Digital Sciences. " +
+        "Notre objectif était de développer une solution BI avancée, capable d’offrir des visualisations, des prédictions et des analyses approfondies sur les données des modules Odoo ERP, tout en surmontant les limites d'accès aux données." +
+        "Le projet a couvert l’ensemble du cycle de vie de la donnée : de l’extraction (ETL) à la modélisation prédictive, en passant par le stockage dans un Data Lake (Minio S3), la structuration dans un Data Warehouse (SQL Server), et la visualisation avec Power BI. " +
+        "Nous avons reconstruit notre propre base de données inspirée des schémas Odoo (ventes, achats, stock) pour garantir l’indépendance et la flexibilité des analyses. " +
+        "La mise en production a été assurée à l’aide de FastAPI et ReactJS, avec une attention particulière portée à la qualité de la modélisation Machine Learning et à l’automatisation des pipelines via Airflow.",
+    images: images.projetBI, // à définir dans ton fichier images.js
+    technologies: [
+        "Airflow", "Python", "PostgreSQL", "SQL Server", 
+        "Minio", "Power BI", "Scikit-Learn", 
+        "FastAPI", "ReactJS"
+    ],
+    fonctionnalités: [
+        "Pipeline ETL automatisé avec Airflow",
+        "Reconstitution de schémas Odoo ERP",
+        "Stockage Data Lake et Data Warehouse",
+        "Visualisations dynamiques avec Power BI",
+        "Modélisation prédictive avec Scikit-Learn",
+        "Mise en production API & Front (FastAPI + React)"
+    ],
+    collaborators: [
+        { name: "Boni Acobe Ange Ulrich", role: "Data Engineer / Analyste BI" },
+        { name: "Jean Christian AHIKPA", role: "Analyste BI & Intégrateur BI" }
+    ],
+    category: "Business Intelligence",
+    client: "TEK-UP University",
+    date: "Mars à Juin 2025",
+    url: ""
+    },
+    {
         id: 1,
         title: "Gestion des consultations médicales - ClickHealth",
         description: "Le projet est une plateforme web de gestion des consultations médicales, de la prise de rendez-vous, de la file d'attente, et de la gestion des spécialistes",
@@ -220,36 +285,32 @@ export const sampleProjects = [
         url: ""
     },
     {
-    id: 9,
-    title: "Projet BI - Analyse Personnalisée sur ERP Odoo",
-    description: "Un projet de Business Intelligence avancé visant à dépasser les limites analytiques standards d’Odoo ERP en construisant une solution sur mesure.",
+    id: 12,
+    title: "Projet Éducatif - Plateforme Tech Pour Science",
+    description: "Une plateforme web complète visant à promouvoir l’éducation scientifique en Côte d’Ivoire grâce à des outils interactifs et modernes.",
     description_long:
-        "Ce projet de Business Intelligence a été réalisé dans le cadre du second semestre de la formation en Data Science & Intelligence Artificielle à TEK-UP University of Digital Sciences. " +
-        "Notre objectif était de développer une solution BI avancée, capable d’offrir des visualisations, des prédictions et des analyses approfondies sur les données des modules Odoo ERP, tout en surmontant les limites d'accès aux données." +
-        "Le projet a couvert l’ensemble du cycle de vie de la donnée : de l’extraction (ETL) à la modélisation prédictive, en passant par le stockage dans un Data Lake (Minio S3), la structuration dans un Data Warehouse (SQL Server), et la visualisation avec Power BI. " +
-        "Nous avons reconstruit notre propre base de données inspirée des schémas Odoo (ventes, achats, stock) pour garantir l’indépendance et la flexibilité des analyses. " +
-        "La mise en production a été assurée à l’aide de FastAPI et ReactJS, avec une attention particulière portée à la qualité de la modélisation Machine Learning et à l’automatisation des pipelines via Airflow.",
-    images: images.projetBI, // à définir dans ton fichier images.js
+        "Ce projet a été développé individuellement dans le cadre de l’initiative **Tech Pour Science**, qui vise à rendre la science plus accessible, moderne et inclusive. " +
+        "L’objectif était de concevoir une plateforme éducative interactive permettant de vulgariser les sciences auprès des jeunes, notamment via des contenus numériques, des ateliers et des outils immersifs. " +
+        "La solution couvre l’ensemble de la chaîne technique : un backend robuste en Django Rest Framework pour la gestion des données et des utilisateurs, un frontend moderne en Next.js avec TailwindCSS pour une expérience fluide et responsive, et un design centré sur l’accessibilité et l’interactivité. " +
+        "Le projet illustre la capacité à construire une application web complète, évolutive et orientée impact sociétal, alignée sur les Objectifs de Développement Durable (ODD), notamment l’accès équitable à l’éducation scientifique.",
+    images: images.projetTechPourScience, // à définir dans ton fichier images.js
     technologies: [
-        "Airflow", "Python", "PostgreSQL", "SQL Server", 
-        "Minio", "Power BI", "Scikit-Learn", 
-        "FastAPI", "ReactJS"
+        "Django Rest Framework", "Next.js", "TailwindCSS",
+        "PostgreSQL", "Docker"
     ],
     fonctionnalités: [
-        "Pipeline ETL automatisé avec Airflow",
-        "Reconstitution de schémas Odoo ERP",
-        "Stockage Data Lake et Data Warehouse",
-        "Visualisations dynamiques avec Power BI",
-        "Modélisation prédictive avec Scikit-Learn",
-        "Mise en production API & Front (FastAPI + React)"
+        "Gestion des utilisateurs et authentification",
+        "Diffusion de contenus scientifiques interactifs",
+        "Design responsive et accessible avec TailwindCSS",
+        "Backoffice pour administration des ateliers et activités",
+        "Intégration d’API éducatives et modules interactifs"
     ],
     collaborators: [
-        { name: "Boni Acobe Ange Ulrich", role: "Data Engineer / Analyste BI" },
-        { name: "Jean Christian AHIKPA", role: "Analyste BI & Intégrateur BI" }
+        { name: "Elvire Roxane Achi", role: "...." }
     ],
-    category: "Business Intelligence",
-    client: "TEK-UP University",
-    date: "Mars à Juin 2025",
+    category: "EdTech / Éducation Scientifique",
+    client: "Association Tech Pour Science",
+    date: "2025",
     url: ""
 }
 

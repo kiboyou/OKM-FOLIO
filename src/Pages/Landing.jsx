@@ -38,11 +38,11 @@ const Landing = () => {
                         {/* Resume Section */}
                         <Resume/>
 
-                        {/* Services Section */}
-                        <Services/>
-
                         {/* Portfolio Section */}
                         <Portfolio/>
+
+                        {/* Services Section */}
+                        <Services/>
 
                         {/* Contact Section */}
                         <Contact/>

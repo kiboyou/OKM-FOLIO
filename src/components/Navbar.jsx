@@ -1,9 +1,11 @@
-import { Link as ScrollLink } from 'react-scroll';
 import { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import useLanguage from '../context/useLanguage.js';
 // import './Navbar.css'; // Assure-toi d'importer ce fichier CSS
 
 const Navbar = () => {
   const [isMobileNavActive, setMobileNavActive] = useState(false);
+  const { lang, toggleLang, t } = useLanguage();
 
   const toggleMobileMenu = () => {
     setMobileNavActive(prev => !prev);
@@ -90,26 +92,39 @@ const Navbar = () => {
             style={{ cursor: 'pointer', zIndex: 99999, position: 'fixed', top: 15, right: 15, fontSize: 32, color: '#fff' }}
         ></i>
 
-        <nav id="navmenu" className="navmenu">
+        <nav id="navmenu" className="navmenu d-flex align-items-center">
           <ul>
-            {['hero', 'À propos', 'cv', 'services', 'portfolio', 'contact'].map(
-                (section, index) => (
-                    <li key={index}>
-                      <ScrollLink
-                          to={section}
-                          smooth={true}
-                          duration={300}
-                          spy={true}
-                          offset={-80}
-                          onClick={closeMobileMenu}
-                          activeClass="active"
-                      >
-                        {section === 'hero' ? 'Accueil' : section.charAt(0).toUpperCase() + section.slice(1)}
-                      </ScrollLink>
-                    </li>
-                )
-            )}
+            {[
+              { id: 'hero', key: 'hero' },
+              { id: 'À propos', key: 'about' },
+              { id: 'cv', key: 'cv' },
+              { id: 'portfolio', key: 'portfolio' },
+              { id: 'services', key: 'services' },
+              { id: 'contact', key: 'contact' }
+            ].map((item, index) => (
+              <li key={index}>
+                <ScrollLink
+                  to={item.id}
+                  smooth={true}
+                  duration={300}
+                  spy={true}
+                  offset={-80}
+                  onClick={closeMobileMenu}
+                  activeClass="active"
+                >
+                  {t.nav[item.key]}
+                </ScrollLink>
+              </li>
+            ))}
           </ul>
+          {/* <button
+            type="button"
+            onClick={toggleLang}
+            className="btn btn-sm btn-outline-success ms-2"
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            {lang === 'fr' ? 'EN' : 'FR'}
+          </button> */}
         </nav>
       </>
   );
