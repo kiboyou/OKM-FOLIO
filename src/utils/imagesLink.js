@@ -157,7 +157,14 @@ const images = {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1749820738/WhatsApp_Image_2025-06-13_at_13.51.41_jpu8bk.jpg`,
         }
     ], 
-    projetPentesting : [
+    projetPentesting: [
+    {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1760554553/Screenshot_2025-10-09_at_00.46.24_pbhgcf.png`,
+        },
+        {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1760554552/Screenshot_2025-10-09_at_00.48.13_xmbojp.png`,
+        },
+
          {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1757429790/Screenshot_2025-09-09_at_15.46.18_higim7.png`,
         },
@@ -169,7 +176,11 @@ const images = {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1757429794/Screenshot_2025-09-09_at_15.45.41_sesgxp.png`,
         }, {
             url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1757429789/Screenshot_2025-09-09_at_15.46.33_gyesq8.png`,
-        }
+        }, 
+
+        {
+            url: `https://res.cloudinary.com/dqybzf7bu/image/upload/v1760554552/Screenshot_2025-10-09_at_00.48.47_zbkfta.png`,
+        },
     ],
     projetTechPourScience : [
          {
