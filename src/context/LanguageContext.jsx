@@ -22,7 +22,10 @@ const translations = {
       values: {
         languages: 'Français, Anglais', availability: 'Immédiate', address: 'Tunis, Tunisie'
       },
-      description: `Développeur Web Fullstack passionné, je conçois des solutions numériques performantes et intuitives, aussi bien côté front-end (React.js, HTML/CSS, JavaScript) que back-end (Python, Django, Django REST Framework). Mes projets vont de la gestion de dossiers médicaux à des plateformes de réservation, en passant par la gestion de restaurants, laboratoires et agences de location.\nCurieux et rigoureux, je maîtrise Git, Docker, AWS ainsi que la conception de bases de données. J’évolue aisément en méthode Agile/SCRUM et j’apprécie les environnements collaboratifs, même à distance.\nÉtudiant en dernière année de cycle ingénieur en Data Science & Machine Learning à TEK-UP University (Tunis). Passionné par l’IA appliquée, le Machine Learning et le MLOps, je souhaite mettre mes compétences techniques et analytiques au service de projets innovants en entreprise.`
+      description: `Développeur Web Fullstack passionné, je conçois des solutions numériques performantes et intuitives, aussi bien côté front-end (React.js, HTML/CSS, JavaScript) que back-end (Python, Django, Django REST Framework). 
+      Mes projets vont de la gestion de dossiers médicaux à des plateformes de réservation, en passant par la gestion de restaurants, laboratoires et agences de location.\nCurieux et rigoureux, je maîtrise Git, Docker, AWS ainsi que la conception de bases de données. J’évolue aisément en méthode Agile/SCRUM et 
+      j’apprécie les environnements collaboratifs, même à distance.\nÉtudiant en dernière année de cycle ingénieur en Data Science & Machine Learning à TEK-UP University (Tunis). Passionné par l’Intelligence Artificielle appliquée, l'apprentissage automatique, profond et le MLOps, 
+      je souhaite mettre mes compétences techniques et analytiques au service de projets innovants en entreprise.`
     },
     resume: {
       title: 'Mon parcours académique.',
