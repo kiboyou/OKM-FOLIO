@@ -1,126 +1,99 @@
-# 🌟 Portfolio Personnel - Frontend (React + Vite)
+# OUATTFOLIO — Portfolio + Dashboard (Next.js + Supabase)
 
-Ce projet est un **portfolio personnel** moderne et responsive, développé avec **React** et **Vite**, mettant en avant mes compétences, mes projets, mon parcours, et incluant un **formulaire de contact** fonctionnel pour permettre aux visiteurs de me joindre facilement.
+Application **unique** réunissant l'ancien front React/Vite et l'API FastAPI :
+site public bilingue (FR/EN), **blog**, **idées** (publiées + boîte à idées),
+et un **dashboard d'administration** pour gérer tout le contenu (CRUD).
 
----
+- **Next.js 16** (App Router, TypeScript)
+- **Supabase** : base PostgreSQL + Auth (admin) + Storage (images/CV)
+- **Design conservé à l'identique** (thème DevFolio + Bootstrap, accent vert `#006400`)
 
-## 🛠️ Technologies utilisées
+> Sans Supabase configuré, le site public fonctionne avec des **données de
+> démonstration** (seed local) ; le dashboard affiche un message tant que la
+> base n'est pas branchée.
 
-- **React** – Pour construire l’interface utilisateur de manière déclarative.
-- **Vite** – Pour un développement rapide avec une expérience moderne.
-- **React Router** – Pour la navigation entre les sections/pages du site.
-- **Tailwind CSS** ou **CSS modules** – Pour un design propre et personnalisable.
-- **Fetch API** – Pour envoyer les messages du formulaire de contact au backend (ex: FastAPI).
-- **EmailJS** *(optionnel)* – Alternative si tu veux éviter un backend pour l'envoi des mails.
+## Stack & structure
 
----
+```
+app/
+  page.tsx               Accueil (Hero, À propos, CV, Portfolio, Services, Contact)
+  realisations/          Liste + détail des projets
+  blog/                  Liste + détail des articles
+  idees/                 Idées publiées + formulaire de proposition
+  login/                 Connexion admin
+  dashboard/             Espace admin protégé (CRUD de toutes les entités)
+  api/contact/           Réception + email du formulaire de contact
+  api/idea-proposals/    Réception des propositions d'idées
+components/               Composants publics portés 1:1 (design inchangé)
+lib/
+  data.ts                Lecture publique (Supabase, fallback seed)
+  admin-data.ts          Lecture dashboard
+  seed-data.ts           Contenu existant (projets, profil, skills…)
+  supabase/              Clients SSR / browser / admin / public
+i18n/labels.ts           Libellés UI bilingues
+supabase/migrations/     Schéma SQL (tables, RLS, bucket media)
+scripts/seed.ts          Remplit la base avec le contenu existant
+```
 
-## ✨ Fonctionnalités
+## Mise en route locale
 
-- **Section Accueil** – Présentation rapide et slogan d’accroche.
-- **À propos** – Informations sur moi, mes valeurs, mes passions.
-- **Compétences** – Liste de mes langages, outils et technologies.
-- **Projets** – Galerie de projets avec descriptions et liens (GitHub, démo).
-- **Formulaire de contact** – Permet aux visiteurs d’envoyer un message personnalisé.
-- **Design responsive** – Optimisé pour desktop, tablette et mobile.
+1. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
 
----
+2. **Créer un projet Supabase** sur https://supabase.com, puis dans
+   *SQL Editor* exécuter le contenu de [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql)
+   (crée les tables, les politiques RLS et le bucket `media`).
 
-## 🚀 Installation et exécution du projet
+3. **Variables d'environnement** — copier `.env.example` en `.env.local` :
+   ```bash
+   cp .env.example .env.local
+   ```
+   Renseigner (Settings → API du projet Supabase) :
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY` (secret, **serveur uniquement**)
+   - `EMAIL_USER`, `EMAIL_PASSWORD` (mot de passe d'application Gmail), `MAIL_USERNAME_RECEPTION`
 
-1. **Cloner le dépôt du projet**
+4. **Importer le contenu existant** (11 projets, profil, compétences, services,
+   certifications, formations, exemples blog/idées) :
+   ```bash
+   npm run seed
+   ```
 
-   Commencez par cloner le dépôt Git contenant le projet frontend.
+5. **Créer le compte administrateur** — dans Supabase → *Authentication → Users
+   → Add user* (email + mot de passe). C'est le compte de connexion au dashboard.
 
-2. **Se rendre dans le dossier du projet**
+6. **Lancer le serveur de dev**
+   ```bash
+   npm run dev
+   ```
+   - Site public : http://localhost:3000
+   - Dashboard : http://localhost:3000/login → http://localhost:3000/dashboard
 
-   Utilisez votre terminal pour naviguer vers le dossier cloné.
+## Contenu bilingue
 
-3. **Installer les dépendances**
+Chaque contenu géré possède des champs `*_fr` et `*_en`. Le sélecteur **FR/EN**
+de la barre de navigation bascule l'affichage côté client ; si une traduction
+EN manque, le français est utilisé en repli.
 
-   Exécutez la commande `npm install` afin d’installer toutes les dépendances nécessaires.
+## Déploiement (Vercel)
 
-4. **Démarrer le serveur de développement**
+Le projet est déjà hébergé sur Vercel. Pour pointer sur cette nouvelle app :
 
-   Lancez le projet avec la commande `npm run dev`.  
-   Par défaut, l'application sera accessible sur `http://localhost:5173`.
+1. **Root Directory** du projet Vercel = `okmfolio`.
+2. Ajouter les mêmes variables d'environnement que `.env.local`
+   (les `NEXT_PUBLIC_*` côté client, les autres côté serveur).
+3. Dans Supabase → *Authentication → URL Configuration*, ajouter le domaine
+   Vercel aux *Redirect URLs* si besoin.
 
----
+Supabase reste hébergé séparément (cloud Supabase).
 
-## 📡 Connexion au backend
+## Migration depuis l'ancien code
 
-Ce frontend est conçu pour interagir avec une API FastAPI accessible à l’adresse suivante : `http://localhost:8000/contact`.
+`../FontEnd` (React/Vite) et `../API` (FastAPI) sont **remplacés** par cette app.
+Ils peuvent être archivés/supprimés une fois la migration validée.
 
-Assurez-vous que :
-
-- Le backend est bien lancé à cette adresse.
-- Le middleware CORS du backend autorise l'origine `http://localhost:5173`.
-
----
-
-## 🧩 Structure du projet
-
-Le projet est structuré de la manière suivante :
-
-- `src/App.jsx` : contient le formulaire de contact et la logique d'envoi via `fetch`.
-- `vite.config.js` : configuration du serveur de développement Vite.
-- `public/` : dossier pour les fichiers statiques.
-- `package.json` : liste des dépendances et scripts.
-
----
-
-## 📝 Fonctionnalité du formulaire
-
-Le formulaire contient les champs suivants :
-
-- Nom
-- Email
-- Sujet
-- Message
-
-Lors de la soumission, les données sont envoyées au backend via une requête HTTP `POST`.  
-Une fois le message traité, une réponse s'affiche à l’utilisateur pour confirmer l’envoi ou signaler une erreur.
-
----
-
-## 🔐 Sécurité et validation
-
-- Les champs sont requis avant la soumission.
-- Le backend devrait inclure des validations supplémentaires et une protection contre le spam ou les injections.
-
----
-
-## 🧪 Tests et vérification
-
-Avant de mettre en production :
-
-- Vérifiez que la communication avec l’API fonctionne correctement.
-- Testez les cas de réussite et d’échec (ex. backend hors ligne).
-- Ajoutez éventuellement un système de chargement ou de validation visuelle.
-
----
-
-## 🌐 Déploiement
-
-Pour déployer le frontend, vous pouvez utiliser :
-
-- **Vercel**
-- **Netlify**
-- **GitHub Pages** (avec `vite-plugin-gh-pages`)
-- **Render**
-
-N’oubliez pas de configurer l’URL de l’API backend en fonction de l’environnement (`.env` ou variable d’environnement publique dans Vite).
-
----
-
-## 🙋 Auteur
-
-Projet développé par : _kiboyou Mohamed OUATTARA_  
-Contact : _ouattarakiboyoumohamed@gmail.com - +225 0759239686 / +216 58486482_
-
----
-
-## 📄 Licence
-
-Ce projet est sous licence **LICENCE**. Vous êtes libre de le modifier et de le redistribuer.
-
+⚠️ **Sécurité** : l'ancien fichier `../API/.env` contient un mot de passe Gmail
+en clair — pensez à le **révoquer/régénérer** côté Google.
